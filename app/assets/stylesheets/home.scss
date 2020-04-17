@@ -1,3 +1,35 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*
+*= require material_icons
+*/
+
+// Importing materialize library 
+@import "materialize";
+@import "material_icons";
+
+
+
+/**  Custom css  **/
+
+//margin classes
+.m-left-5{
+    margin-left: 5%;
+}
+.m-right-5{
+    margin-right: 5%;
+}
+
+//Menu
+.menu-search{
+    max-width:300px;
+   
+    @media only screen and (max-width: 902px) {
+        float: left !important;
+    }
+}
+
+
+
