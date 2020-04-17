@@ -2,10 +2,17 @@
 
 /** Event listeners */
 
+// document.addEventListener("turbolinks:load", ()=> {
+//     initHamburger();
+//  });
+
 document.addEventListener('DOMContentLoaded', function() {
-
-    // Initilise sidebar menu
-    const elems = document.querySelectorAll('.sidenav');
-    const instances = M.Sidenav.init(elems, {});
-
+       var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, {});
   });
+
+  // Initilise sidebar menu
+//   function initHamburger(){
+//     var elems = document.querySelectorAll('.sidenav');
+//     var instances = M.Sidenav.init(elems, {});
+//   }
