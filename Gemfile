@@ -20,6 +20,7 @@ gem 'jbuilder', '~> 2.5'
 # Custom added third pary gems
 gem 'materialize-sass', '~> 1.0.0'
 gem 'material_icons'
+gem 'stock_quote', '~> 3.0'
 
 
 group :development, :test do
