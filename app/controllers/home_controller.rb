@@ -13,7 +13,7 @@ class HomeController < ApplicationController
 
   def getStock
     StockQuote::Stock.new(api_key: 'pk_8dd852fe4adb468dbee87c0459e0b83a')
-    render :json => StockQuote::Stock.raw_logo("fb").to_json 
+    render :json => StockQuote::Stock.raw_logo(params[:id]).to_json 
   end
 
   # About page

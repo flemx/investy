@@ -1,0 +1,11 @@
+.headerColor{
+    color: #4db6ac;
+    font-weight: 300;
+    font-size: 2.92rem;
+    line-height: 110%;
+}
+
+.stockImgCard{
+    max-height: 120px;
+    max-width: 50px;
+}

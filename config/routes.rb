@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   get 'about' => 'home#about'
-  get 'stock' => 'home#getStock'
+  get 'api/stock/:id' => 'home#getStock'
   root 'home#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
