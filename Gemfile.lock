@@ -47,6 +47,7 @@ GEM
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
+    bcrypt (3.1.13)
     bindex (0.8.1)
     builder (3.2.4)
     byebug (11.0.1)
@@ -69,6 +70,12 @@ GEM
     concurrent-ruby (1.1.6)
     connection_pool (2.2.2)
     crass (1.0.6)
+    devise (4.7.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0)
+      responders
+      warden (~> 1.2.3)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     erubi (1.9.0)
@@ -103,6 +110,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.9-x86-mingw32)
       mini_portile2 (~> 2.4.0)
+    orm_adapter (0.5.0)
     public_suffix (4.0.4)
     puma (3.12.4)
     rack (2.2.2)
@@ -144,6 +152,9 @@ GEM
       railties (>= 3.2)
       tilt
     regexp_parser (1.7.0)
+    responders (2.4.1)
+      actionpack (>= 4.2.0, < 6.0)
+      railties (>= 4.2.0, < 6.0)
     rest-client (2.0.2-x86-mingw32)
       ffi (~> 1.9)
       http-cookie (>= 1.0.2, < 2.0)
@@ -187,6 +198,8 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.7-x86-mingw32)
+    warden (1.2.8)
+      rack (>= 2.0.6)
     web-console (3.7.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -209,6 +222,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   coffee-rails (~> 4.2)
+  devise (~> 4.7, >= 4.7.1)
   jbuilder (~> 2.5)
   material_icons
   materialize-sass (~> 1.0.0)

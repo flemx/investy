@@ -16,14 +16,23 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
+#--------------     CUSTOM ADDED GEMS  --------------------#
 
-# Custom added third pary gems
+# materialize framework
 gem 'materialize-sass', '~> 1.0.0'
 gem 'material_icons'
+gem 'simple_form'
+
+# External API sources
 gem 'stock_quote', '~> 3.0'
 
+#React
 gem 'webpacker'
 gem 'react-rails'
+
+#User profile management
+gem 'devise', '~> 4.7', '>= 4.7.1'
+#-----------------------------------------------------------#
 
 
 group :development, :test do
@@ -33,6 +42,7 @@ group :development, :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
 end
+
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.

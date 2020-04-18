@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   get 'about' => 'home#about'
   get 'api/stock/:id' => 'home#getStock'
   root 'home#index'
