@@ -7,8 +7,15 @@
 //  });
 
 document.addEventListener('DOMContentLoaded', function() {
-       var elems = document.querySelectorAll('.sidenav');
+    var elems = document.querySelectorAll('.sidenav');
     var instances = M.Sidenav.init(elems, {});
+
+    var dropdown1 = document.querySelector('.dropdown-trigger');
+    var dropdownOptions = {
+        'closeOnClick': true,
+        'hover':true
+    }
+    var instanceDropdown1 = M.Dropdown.init(dropdown1, dropdownOptions);
   });
 
   // Initilise sidebar menu

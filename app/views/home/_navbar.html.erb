@@ -1,27 +1,40 @@
 
 <nav class="teal lighten-2">
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo left-align m-left-5"><i class="material-icons hide-on-med-and-down">account_balance</i>Investy</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger" onclick="initHamburger()"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down m-right-5">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "About Me", about_path %></li>
+      <a href="/" class="brand-logo left-align m-left-5"><i class="material-icons hide-on-med-and-down">account_balance</i>Investy</a>
+
+      <% if user_signed_in? %>
+
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down m-right-5">
+              <li>
+            <a class="dropdown-trigger" href="#!" data-target="dropdown1"> <i class="material-icons">account_circle</i>
+            </a>
+          </li>
+          </ul>
+
+
+        <form>
+            <div class="input-field right menu-search">
+              <input id="search" type="search" required>
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>
+
+      <ul class="sidenav" id="mobile-demo">
+        <li> <%= link_to "Home", root_path %></li>
+        <li><%= link_to "Account details", about_path %><li>
+        <li><%= link_to 'Sign out', destroy_user_session_path,:method => :delete%></li>
       </ul>
 
+      <ul id="dropdown1" class="dropdown-content">
+        <li><%= link_to "Account", about_path %><li>
+        <%= link_to 'Sign out', destroy_user_session_path,:method => :delete%>
+      </ul>
+        <% end %>
 
-    <form>
-        <div class="input-field right menu-search">
-          <input id="search" type="search" required>
-          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-          <i class="material-icons">close</i>
-        </div>
-      </form>
-
-  <ul class="sidenav" id="mobile-demo">
-    <li> <%= link_to "Home", root_path %></li>
-    <li><%= link_to "About Me", about_path %><li>
-  </ul>
-
+      
    
 
     </div>

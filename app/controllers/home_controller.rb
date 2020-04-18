@@ -2,6 +2,7 @@
 require 'json'
 
 class HomeController < ApplicationController
+  before_action :authenticate_user!
   def index
     StockQuote::Stock.new(api_key: 'pk_8dd852fe4adb468dbee87c0459e0b83a')
     # @stockTest = StockQuote::Stock.raw_quote("fb").to_json 
