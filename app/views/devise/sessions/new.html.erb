@@ -1,26 +1,36 @@
-<h2>Log in</h2>
+<div class="container">
+        <div class="form-padding m-top-10">
+            <div class="col s12">
+                <div class="card  hoverable centered-form">
+                    <div class="card-content">
+                        <span class="card-title center valign-wrapper teal-text lighten-2-text">Log In</span>
+                         <br />
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+                        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                        <%= f.input :email, required: true, autofocus: true %>
+                        <%= f.input :password, required: true, hint: false %>
+                        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+                        <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+                          <label style='float: right;'>
+                            <%= link_to "Forgot password?", new_password_path(resource_name), class: "deep-orange-text"  %>
+                          </label>
+                        <% end %>
+                        <div style="clear:both;"></div>
+                        <div class="form-actions center">
+                            <%= f.button :submit, "Log in" %>
+                        </div>
+                        <% end %>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  <% end %>
+    <center class="m-bottom-5 m-top-2">
+        <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+          <%= link_to "Sign up", new_registration_path(resource_name), class: "teal-text lighten-2-text center-align" %>
+        <% end %>
+    </center>
+     
+</div>  
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>

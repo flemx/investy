@@ -15,6 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'jquery-rails'
 
 #--------------     CUSTOM ADDED GEMS  --------------------#
 
@@ -22,6 +23,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'materialize-sass', '~> 1.0.0'
 gem 'material_icons'
 gem 'simple_form'
+gem 'materialize-form'
 
 # External API sources
 gem 'stock_quote', '~> 3.0'

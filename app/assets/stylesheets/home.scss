@@ -21,6 +21,20 @@
 .m-right-5{
     margin-right: 5%;
 }
+.m-top-2{
+    margin-top: 2%;
+}
+.m-top-5{
+    margin-top: 5%; 
+}
+.m-top-10{
+    margin-top: 10%;
+}
+
+.m-bottom-5{
+    margin-bottom: 5%; 
+}
+
 
 //Menu
 .menu-search{
@@ -32,4 +46,9 @@
 }
 
 
-//Index
+//Forms
+
+.centered-form{
+    max-width: 500px;
+    margin: auto;
+}
