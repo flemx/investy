@@ -8,12 +8,11 @@
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down m-right-5">
               <li>
-            <a class="dropdown-trigger" href="#!" data-target="dropdown1"> <i class="material-icons">account_circle</i>
+                <a class="dropdown-trigger" href="#!" data-target="dropdown1"> <i class="material-icons">account_circle</i>
             </a>
           </li>
           </ul>
-
-
+      <% if current_page?(root_path) %>
         <form>
             <div class="input-field right menu-search">
               <input id="search" type="search" required>
@@ -21,15 +20,15 @@
               <i class="material-icons">close</i>
             </div>
           </form>
-
+      <% end %>
       <ul class="sidenav" id="mobile-demo">
         <li> <%= link_to "Home", root_path %></li>
-        <li><%= link_to "Account details", about_path %><li>
+        <li><%= link_to "Account details", edit_user_registration_path %><li>
         <li><%= link_to 'Sign out', destroy_user_session_path,:method => :delete%></li>
       </ul>
 
       <ul id="dropdown1" class="dropdown-content">
-        <li><%= link_to "Account", about_path %><li>
+        <li><%= link_to "Account", edit_user_registration_path %><li>
         <%= link_to 'Sign out', destroy_user_session_path,:method => :delete%>
       </ul>
         <% end %>
