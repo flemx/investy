@@ -11,6 +11,11 @@ class HomeController < ApplicationController
     @stockLogo = StockQuote::Stock.logo("fb")
   end
 
+  # GET /api/users
+  def getUsers
+    render :json => User.all.to_json 
+  end
+
 
   def getStock
     StockQuote::Stock.new(api_key: 'pk_8dd852fe4adb468dbee87c0459e0b83a')

@@ -9,9 +9,9 @@
                         <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
  
                         <div class="input-field col email required user_email">
-                                                  
+                            <%= f.label :email %><br />                         
                             <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-                            <%= f.label :email %><br />
+                           
                         </div>
                       
                         <div class="form-actions center">
