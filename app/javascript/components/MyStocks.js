@@ -10,6 +10,7 @@ class MyStocks extends React.Component {
   constructor(props) {
     super(props);
     this.searchInput = React.createRef();
+    this.deleteStock = this.deleteStock.bind(this);
     this.addNewStock = this.addNewStock.bind(this);
     this.filterStocks = this.filterStocks.bind(this);
     this.clearSearch = this.clearSearch.bind(this);
@@ -77,6 +78,27 @@ class MyStocks extends React.Component {
     console.log('Add stock: ', stock);
   }
 
+  /**
+   * Delete stock from DB
+   */
+  deleteStock(event){
+    console.log(event.target.dataset.ticker);
+    let tickerVal = event.target.dataset.ticker;
+    fetch(`deletestock/${tickerVal}`, {
+      method: 'DELETE',  headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': Rails.csrfToken()
+      },
+      credentials: 'same-origin'
+    }).then((response) => {
+       let stockList =  this.state.allStocks.filter((item)=> { 
+        return item.symbol !== tickerVal;  
+       });
+       M.toast({html: `Succesfully removed ${tickerVal} stock`})
+       this.setState({stocks: stockList, allStocks : stockList})
+    });
+  }
+
 
   render() {
     return (
@@ -114,8 +136,8 @@ class MyStocks extends React.Component {
               <td>{stock.symbol}</td>
               <td>{stock.latest_price}</td>
               <td className={ stock.change > 0? 'teal-text' : 'red-text'}>% {stock.change}</td>
-                <td className="removeBtn">
-                  <i className="material-icons m-left-10">delete_forever</i>
+                <td className="removeBtn" data-ticker={stock.symbol} onClick={this.deleteStock}>
+                  <i className="material-icons m-left-10" data-ticker={stock.symbol}>delete_forever</i>
                 </td>
               </tr>
               )

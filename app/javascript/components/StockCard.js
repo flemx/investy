@@ -83,6 +83,9 @@ class StockCard extends React.Component {
   }
 
 
+  /**
+   * Add new stock in database and update state on other components
+   */
   addStock(){
     this.setState({notLoading: true});
     console.log('addStock executed');

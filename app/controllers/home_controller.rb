@@ -1,6 +1,7 @@
 
 require 'json'
 require_relative  '../presenters/StockPresenter'
+require_relative  '../models/Stock'
 
 class HomeController < ApplicationController
   before_action :authenticate_user!
@@ -21,8 +22,15 @@ class HomeController < ApplicationController
     # GET /stocks/user
   # Get all saved stocks from user per user_id
   def userStocks
-   
    render :json => StockPresenter.new.getStocks(current_user.id)
+  end
+
+
+  # DELETE /deletestock/:ticker
+  # Get all saved stocks from user per user_id
+  def deleteStock
+    p params[:ticker]
+    Stock.where(:ticker => params[:ticker]).destroy_all  
   end
 
 

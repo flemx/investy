@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   get 'about' => 'home#about'
   get 'api/stock/:id' => 'home#getStock'
   get 'stocksuser' => 'home#userStocks'
-  get 'api/users' => 'home#getUsers'
+  delete 'deletestock/:ticker' => 'home#deleteStock'
+  get 'api/users' => 'home#deleteStock'
   root 'home#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
