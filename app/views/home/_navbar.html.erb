@@ -12,17 +12,8 @@
             </a>
           </li>
           </ul>
-      <% if current_page?(root_path) %>
-        <form>
-            <div class="input-field right menu-search">
-              <input id="search" type="search" required>
-              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-              <i class="material-icons">close</i>
-            </div>
-          </form>
-      <% end %>
       <ul class="sidenav" id="mobile-demo">
-        <li> <%= link_to "Home", root_path %></li>
+        <li> <%= link_to "Stocks", root_path %></li>
         <li><%= link_to "Account details", edit_user_registration_path %><li>
         <li><%= link_to 'Sign out', destroy_user_session_path,:method => :delete%></li>
       </ul>

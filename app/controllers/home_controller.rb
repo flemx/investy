@@ -1,5 +1,6 @@
 
 require 'json'
+require_relative  '../presenters/StockPresenter'
 
 class HomeController < ApplicationController
   before_action :authenticate_user!
@@ -14,6 +15,13 @@ class HomeController < ApplicationController
   # GET /api/users
   def getUsers
     render :json => User.all.to_json 
+  end
+
+    # GET /stocks/user
+  # Get all saved stocks from user per user_id
+  def userStocks
+   
+   render :json => StockPresenter.new.getStocks(current_user.id)
   end
 
 

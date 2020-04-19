@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'about' => 'home#about'
   get 'api/stock/:id' => 'home#getStock'
+  get 'stocksuser' => 'home#userStocks'
   get 'api/users' => 'home#getUsers'
   root 'home#index'
 

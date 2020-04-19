@@ -1,13 +1,16 @@
 class StocksController < ApplicationController
   before_action :authenticate_user!
   # before_action :correct_user, only: [:edit, :update, :destroy]
-  before_action :set_stock, only: [:show, :edit, :update, :destroy]
+  before_action  only: [:show, :edit, :update, :destroy]
 
   # GET /stocks
   # GET /stocks.json
   def index
     @stocks = Stock.all
   end
+
+
+
 
   # GET /stocks/1
   # GET /stocks/1.json
