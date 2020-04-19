@@ -1,7 +1,6 @@
 
 require 'json'
-require_relative  '../presenters/StockPresenter'
-require_relative  '../models/Stock'
+require  'stockPresenter'
 
 class HomeController < ApplicationController
   before_action :authenticate_user!
