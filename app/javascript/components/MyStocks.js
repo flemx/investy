@@ -9,7 +9,9 @@ class MyStocks extends React.Component {
    */
   constructor(props) {
     super(props);
+    this.searchInput = React.createRef();
     this.filterStocks = this.filterStocks.bind(this);
+    this.clearSearch = this.clearSearch.bind(this);
     this.state = {
       allStocks : [],
       stocks: []
@@ -40,7 +42,10 @@ class MyStocks extends React.Component {
 
   }
 
-
+  /**
+   *  Search method to search Stocks by company name
+   * @param {*} event 
+   */
   filterStocks(event){
     let results = this.state.allStocks.filter((stock)=>{
       return stock.company_name.toLowerCase().includes(event.target.value.toLowerCase());
@@ -49,6 +54,14 @@ class MyStocks extends React.Component {
       results = [results];
     }
     this.setState({stocks : results});
+  }
+
+  /**
+   * Clear the search form and show all stocks
+   */
+  clearSearch(){
+    this.searchInput.current.value = '';
+    this.setState({stocks : this.state.allStocks});
   }
 
 
@@ -61,9 +74,9 @@ class MyStocks extends React.Component {
         <div className="nav-wrapper search-field m-top-5 m-bottom-2">
           <form>
             <div className="input-field">
-              <input id="search" type="search" required placeholder="search company" onChange={this.filterStocks}/>
+              <input id="search" type="search" required placeholder="search company"ref={this.searchInput}  onChange={this.filterStocks}/>
               <label className="label-icon" htmlFor="search"><i className="material-icons">search</i></label>
-              <i className="material-icons">close</i>
+              <i className="material-icons" onClick={this.clearSearch}>close</i>
             </div>
           </form>
         </div>
