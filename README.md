@@ -6,19 +6,16 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+- Developed in ruby 2.3.3p222
 
-* System dependencies
 
 * Configuration
+- Run 'bundle install' to install dependencies
+- API key for stock_quote is set in StockPresenter Class referenced in ./app/presenters/StockPresenter.rb
 
 * Database creation
+- run "rake db:migrate" to intialise database
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
 
-* ...
