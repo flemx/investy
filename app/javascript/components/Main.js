@@ -10,8 +10,9 @@ class Main extends React.Component {
         return (
             <div className="">
                 <ul className="tabs tabs-fixed-width tab-demo z-depth-1 myTabsEl teal-text lighten-2-text">
-                    <li className="tab"><a href="#tab1" className="teal-text">Stocks</a></li>
-                    <li className="tab"><a href="#tab2" className="teal-text">Add Stock</a></li>
+                    <li className="tab"><a href="#tab1" className="teal-text">My Stocks</a></li>
+                    <li className="tab"><a href="#tab2" className="teal-text">Add Stocks</a></li>
+                    
                 </ul>
                 <div id="tab1" className="col s12">
                     <MyStocks />

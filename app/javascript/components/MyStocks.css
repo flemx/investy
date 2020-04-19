@@ -2,8 +2,7 @@
     max-height: 20px;
 }
 .search-field{
-    width: 50%;
-    margin-left: 40px;
+    width: 320px;
 }
 .del-button{
     text-decoration: underline;
@@ -12,4 +11,17 @@
 .edit-button{
     text-decoration: underline;
     margin-left: 5%;
+}
+.removeBtn{
+    color: #868686;
+    cursor:pointer;
+}
+.removeBtn:hover{
+    color: #ff6464;
+}
+.detailBtn{
+    cursor:pointer;
+}
+.detailBtn:hover{
+    text-decoration: underline;
 }

@@ -16,36 +16,51 @@ class MyStocks extends React.Component {
     return (
 
       <div className="container m-bottom-5">
-        <form>
-            <div className="input-field search-field m-bottom-5">
-              <input id="search" type="search" required />
-              <label className="label-icon" for="search"><i className="material-icons">search</i></label>
-              <i className="material-icons">close</i>
-            </div>
-          </form>
-       <table className="responsive-table">
+          <h3 className="header teal-text text-lighten-2 mainHeader">My saved stocks</h3>
+          <div className="nav-wrapper search-field m-top-5 m-bottom-2">
+            <form>
+              <div className="input-field">
+                <input id="search" type="search" required placeholder="search"/>
+                <label className="label-icon" htmlFor="search"><i className="material-icons">search</i></label>
+                <i className="material-icons">close</i>
+              </div>
+            </form>
+          </div>
+        
+  
+       <table className="responsive-table highlight">
               <thead>
                 <tr>
                     <th>Company</th>
                     <th>Ticker</th>
                     <th>Price</th>
-                    <th>Actions</th>
+                    <th>Change</th>
+                    <th>Remove</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>
+                  <td className="detailBtn">
+                    <img className="activator stockImgIcon m-right-5" src="https://storage.googleapis.com/iexcloud-hl37opg/api/logos/FB.png" />
+                      Facebook Inc</td>
+                  <td>FB</td>
+                  <td>$3232.87</td>
+                  <td className="teal-text">% 1.54</td>
+                  <td className="removeBtn">
+                       <i className="material-icons m-left-10">delete_forever</i>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="detailBtn">
                   <img className="activator stockImgIcon m-right-5" src="https://storage.googleapis.com/iexcloud-hl37opg/api/logos/FB.png" />
                       Facebook Inc</td>
                   <td>FB</td>
                   <td>$3232.87</td>
-                  <td>
-                  {/* <a className="btn-small waves-effect waves-light red lighten-2 del-button">Del</a> */}
-                  <a className="red-text del-button" href="#">Delete</a> |
-                  <a className="teal-text edit-button" href="#">Edit</a>
+                  <td className="red-text">% -5.54</td>
+                  <td className="removeBtn">
+                       <i className="material-icons m-left-10">delete_forever</i>
                   </td>
                 </tr>
-                
               </tbody>
             </table>
 
