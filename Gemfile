@@ -6,9 +6,10 @@ git_source(:github) do |repo_name|
 end
 
 
+
+
 # default gems
 gem 'rails', '~> 5.1.7'
-gem 'sqlite3' , '< 1.4'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -32,6 +33,11 @@ gem 'react-rails'
 
 #User profile management
 gem 'devise', '~> 4.7', '>= 4.7.1'
+
+#postgresql db for Heroku
+group :production do
+  gem 'pg', '~> 0.18.4'
+end
 #-----------------------------------------------------------#
 
 
@@ -45,6 +51,7 @@ end
 
 
 group :development do
+  gem 'sqlite3' , '< 1.4'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
 end
