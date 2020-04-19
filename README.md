@@ -19,10 +19,10 @@ Things you may want to cover:
 
 * Deployment instructions
  - Deployed on Heroku
- - To deploy on production, set the hostname in './config/environments/production.rb'
+ - To deploy on production, set the hostname and port in './config/environments/production.rb'
 
  ````
-  config.action_mailer.default_url_options = { host: 'investy-demo.herokuapp.com', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'investy-demo.herokuapp.com' }
  ````
 
  Demo:
