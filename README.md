@@ -18,4 +18,7 @@ Things you may want to cover:
 
 
 * Deployment instructions
+ - Deployed on Heroku
 
+ Demo:
+https://investy-demo.herokuapp.com/
