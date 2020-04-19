@@ -73,7 +73,7 @@ class StockCard extends React.Component {
   render() {
     return (
 
-      <div>
+      <div className="Container ">
         <div className="row">
           <h3 className="header headerColor">Find stock information</h3>
           <form className="col s12">

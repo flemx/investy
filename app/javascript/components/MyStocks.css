@@ -1,0 +1,15 @@
+.stockImgIcon{
+    max-height: 20px;
+}
+.search-field{
+    width: 50%;
+    margin-left: 40px;
+}
+.del-button{
+    text-decoration: underline;
+    margin-right: 2%;
+}
+.edit-button{
+    text-decoration: underline;
+    margin-left: 5%;
+}

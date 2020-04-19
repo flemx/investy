@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
         'hover':true
     }
     var instanceDropdown1 = M.Dropdown.init(dropdown1, dropdownOptions);
+
+    let elTab =  document.querySelector('.myTabsEl');
+    var instance = M.Tabs.init(elTab, {});
   });
 
   // Initilise sidebar menu

@@ -1,22 +1,24 @@
 import React from 'react';
+import './Main.css';
 import StockCard from './StockCard';
+import MyStocks from './MyStocks';
 
 class Main extends React.Component {
 
 
     render() {
         return (
-            <div>
-                <ul class="tabs tabs-fixed-width tab-demo z-depth-1">
-                    <li class="tab"><a href="#test1">Stocks</a></li>
-                    <li class="tab"><a href="#test4">Test 2</a></li>
-                    <li class="tab"><a href="#test0">Test 3</a></li>
+            <div className="">
+                <ul className="tabs tabs-fixed-width tab-demo z-depth-1 myTabsEl teal-text lighten-2-text">
+                    <li className="tab"><a href="#tab1" className="teal-text">Stocks</a></li>
+                    <li className="tab"><a href="#tab2" className="teal-text">Add Stock</a></li>
                 </ul>
-                <div id="test1" class="col s12">
+                <div id="tab1" className="col s12">
+                    <MyStocks />
+                </div>
+                <div id="tab2" className="col s12">
                     <StockCard />
                 </div>
-                <div id="test2" class="col s12"><p>Test 2</p></div>
-                <div id="test3" class="col s12"><p>Test 3</p></div>
             </div>
         );
     }
