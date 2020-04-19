@@ -65,10 +65,15 @@ class MyStocks extends React.Component {
     this.setState({stocks : this.state.allStocks});
   }
 
+  /**
+   * Triggered by child component StockCard after adding new stock
+   * @param {*} stock 
+   */
   addNewStock(stock){
     let data = this.state.allStocks;
     data.push(stock);
     this.setState({stocks: data, allStocks : data});
+    this.searchInput.current.value = '';
     console.log('Add stock: ', stock);
   }
 
