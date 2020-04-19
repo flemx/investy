@@ -1,9 +1,10 @@
-# README
+# Investy - React Ruby on Rails app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Ruby on Rails React app to save your favorite stocks.
+
+<img src="screenshot.jpg"/>
+
 
 * Ruby version
 - Developed in ruby 2.3.3p222
