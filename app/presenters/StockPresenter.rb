@@ -10,15 +10,23 @@ class StockPresenter
 
     #Method to get all stocks
     def getStocks(userId)
-        # auth
-        p "userid: "
-        #return StockQuote::Stock.batch(["quote","logo"],["aapl","fb"]).to_json 
-        # Stock.where(:user_id = 1)
         stocknames = []
         Stock.where(:user_id => userId).each{ |item|
             stocknames.push(item.ticker)
         }
-        return StockQuote::Stock.batch(["quote","logo"],stocknames)
+        if stocknames.any?
+            return StockQuote::Stock.batch(["quote","logo"],stocknames)
+        else
+            return '{"company_name" : "No Stocks saved", "symbol" : "none"}'
+        end
+    end
+
+
+    #Method to get single stock by symbol
+    def getStock(symbol)
+
+        return StockQuote::Stock.batch(["quote","logo"],symbol)
+
     end
 
     # get list of all tickers from the user

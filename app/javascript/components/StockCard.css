@@ -9,3 +9,14 @@
     max-height: 120px;
     max-width: 50px;
 }
+.addNewBtn{
+    position: absolute;
+    right: -10px;
+    top: 90%;
+}
+.cardSubContent{
+    margin-bottom: 0px !important;
+}
+.card-content{
+    padding-bottom: 5px;
+}

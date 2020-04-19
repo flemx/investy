@@ -29,6 +29,8 @@ class StocksController < ApplicationController
   # POST /stocks
   # POST /stocks.json
   def create
+    params[:user_id] = current_user.id
+    p stock_params
     @stock = Stock.new(stock_params)
 
       if @stock.save

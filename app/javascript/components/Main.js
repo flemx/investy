@@ -5,6 +5,10 @@ import MyStocks from './MyStocks';
 
 class Main extends React.Component {
 
+    constructor(props) {
+        super(props);
+        console.log('props in Main: ', props);
+      }
 
     render() {
         return (
@@ -18,7 +22,7 @@ class Main extends React.Component {
                     <MyStocks />
                 </div>
                 <div id="tab2" className="col s12">
-                    <StockCard />
+                    <StockCard user={this.props.greeting}/>
                 </div>
             </div>
         );
