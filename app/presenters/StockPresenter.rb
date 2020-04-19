@@ -18,7 +18,7 @@ class StockPresenter
         Stock.where(:user_id => userId).each{ |item|
             stocknames.push(item.ticker)
         }
-        return StockQuote::Stock.batch(["quote","logo"],stocknames).to_json
+        return StockQuote::Stock.batch(["quote","logo"],stocknames)
     end
 
     # get list of all tickers from the user
