@@ -10,6 +10,7 @@ class MyStocks extends React.Component {
   constructor(props) {
     super(props);
     this.searchInput = React.createRef();
+    this.addNewStock = this.addNewStock.bind(this);
     this.filterStocks = this.filterStocks.bind(this);
     this.clearSearch = this.clearSearch.bind(this);
     this.state = {
@@ -64,6 +65,12 @@ class MyStocks extends React.Component {
     this.setState({stocks : this.state.allStocks});
   }
 
+  addNewStock(stock){
+    let data = this.state.allStocks;
+    data.push(stock);
+    this.setState({stocks: data, allStocks : data});
+    console.log('Add stock: ', stock);
+  }
 
 
   render() {

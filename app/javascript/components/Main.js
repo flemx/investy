@@ -7,7 +7,18 @@ class Main extends React.Component {
 
     constructor(props) {
         super(props);
+        this.myStocks = React.createRef();
+        this.triggerChange = this.triggerChange.bind(this);
         console.log('props in Main: ', props);
+      }
+
+      /**
+       *  Gets called if new stock is added
+       * @param {*} newStock 
+       */
+      triggerChange(newStock){
+          console.log('triggerChange: ', newStock);
+          this.myStocks.current.addNewStock(newStock);
       }
 
     render() {
@@ -19,10 +30,10 @@ class Main extends React.Component {
                     
                 </ul>
                 <div id="tab1" className="col s12">
-                    <MyStocks />
+                    <MyStocks ref={this.myStocks}/>
                 </div>
                 <div id="tab2" className="col s12">
-                    <StockCard user={this.props.greeting}/>
+                    <StockCard user={this.props.greeting} callbacktrigger={this.triggerChange}/>
                 </div>
             </div>
         );

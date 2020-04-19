@@ -100,6 +100,7 @@ class StockCard extends React.Component {
       console.log(data);
       this.setState({notLoading: false});
       M.toast({html: 'Succesfully added stock'})
+      this.props.callbacktrigger(this.state.stock);
     });
   }
 
