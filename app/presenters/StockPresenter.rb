@@ -1,4 +1,4 @@
-require_relative '../models/Stock'
+# require_relative '/models/Stock'
 
 class StockPresenter
 
