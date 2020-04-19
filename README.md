@@ -3,7 +3,7 @@
 
 Ruby on Rails React app to save your favorite stocks.
 
-<img src="screenshot.jpg"/>
+<img src="screenshot.jpg" style="max-width: 400px;"/>
 
 
 ### Ruby version
