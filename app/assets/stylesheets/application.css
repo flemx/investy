@@ -13,3 +13,64 @@
  *= require_tree .
  *= require_self
  */
+
+
+ 
+/**  Custom css  **/
+
+
+.m-left-5{
+    margin-left: 5%;
+}
+.m-left-10{
+    margin-left: 10%;
+}
+.m-right-5{
+    margin-right: 5%;
+}
+.m-top-2{
+    margin-top: 2%;
+}
+.m-top-3{
+    margin-top: 3%; 
+}
+.m-top-5{
+    margin-top: 5%; 
+}
+.m-top-10{
+    margin-top: 10%;
+}
+
+.m-bottom-5{
+    margin-bottom: 5%; 
+}
+.m-bottom-2{
+    margin-bottom: 2%; 
+}
+
+
+
+.mainHeader{
+    font-weight: 300;
+    font-size: 2.92rem;
+    line-height: 110%;
+}
+
+
+
+.menu-search{
+    max-width:300px;
+   
+}
+@media only screen and (max-width: 902px) {
+    .menu-search{
+        float: left !important;
+    } 
+}
+
+
+
+.centered-form{
+    max-width: 500px;
+    margin: auto;
+}
